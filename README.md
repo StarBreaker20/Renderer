@@ -1,4 +1,4 @@
-# Renderer — Pause. Edit. Render.
+# rendrr `v0.1` — Pause. Edit. Render.
 
 A video-catalog platform where you **upload a video, play it, pause it into
 frames, and edit those frames live** — adding and repositioning text, logos,

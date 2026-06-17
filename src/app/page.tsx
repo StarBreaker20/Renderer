@@ -12,8 +12,11 @@ export default async function CatalogPage() {
     <main className="mx-auto min-h-screen max-w-6xl px-6 py-10">
       <header className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-3xl font-semibold tracking-tight">
-            <span className="text-accent">Renderer</span> Catalog
+          <h1 className="flex items-center gap-2 text-3xl font-semibold tracking-tight">
+            <span className="text-accent">rendrr</span> Catalog
+            <span className="rounded-full border border-edge bg-panel2 px-2 py-0.5 text-[11px] font-medium text-muted">
+              v0.1
+            </span>
           </h1>
           <p className="mt-1 max-w-xl text-sm text-muted">
             Upload a video, pause it into frames, then edit text, logos, shapes,

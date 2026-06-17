@@ -1,5 +1,5 @@
 {
-  "name": "renderer",
+  "name": "rendrr",
   "version": "0.1.0",
   "private": true,
   "description": "Video catalog platform: pause a video, edit frames with text/logos/shapes/colors, and render deterministically with Remotion (Lambda export).",

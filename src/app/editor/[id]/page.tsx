@@ -18,6 +18,9 @@ export default async function EditorPage({
   return (
     <div className="flex h-screen flex-col overflow-hidden">
       <nav className="flex h-12 shrink-0 items-center gap-3 border-b border-edge bg-panel px-4">
+        <Link href="/" className="text-sm font-semibold text-accent hover:opacity-80">
+          rendrr
+        </Link>
         <Link href="/" className="text-sm text-muted hover:text-gray-100">
           ← Catalog
         </Link>
