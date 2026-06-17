@@ -1,0 +1,38 @@
+{
+  "name": "renderer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Video catalog platform: pause a video, edit frames with text/logos/shapes/colors, and render deterministically with Remotion (Lambda export).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "remotion:studio": "remotion studio src/remotion/index.ts",
+    "remotion:deploy": "node --experimental-vm-modules scripts/deploy.mjs",
+    "remotion:render": "remotion render src/remotion/index.ts VideoEditor out/preview.mp4"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.479",
+    "@remotion/cli": "4.0.479",
+    "@remotion/lambda": "4.0.479",
+    "@remotion/player": "4.0.479",
+    "@remotion/renderer": "4.0.479",
+    "next": "^15.1.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.479",
+    "zod": "^3.24.1",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}
