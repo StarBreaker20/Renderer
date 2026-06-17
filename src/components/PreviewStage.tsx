@@ -45,7 +45,11 @@ export function PreviewStage({
     return () => ro.disconnect();
   }, [project.width, project.height]);
 
-  // Sync the playhead + play state from the player into the store.
+  // Sync the playhead + play state from the player into the store. The Player
+  // only mounts once we have a measured box (box.width > 0), so gate the
+  // listener wiring on that — otherwise this effect runs while playerRef is
+  // still null and the play/pause/frame events never reach the store.
+  const playerMounted = box.width > 0;
   useEffect(() => {
     const player = playerRef.current;
     if (!player) return;
@@ -63,7 +67,7 @@ export function PreviewStage({
       player.removeEventListener("pause", onPause);
       player.removeEventListener("ended", onPause);
     };
-  }, [playerRef, setCurrentFrame, setPlaying]);
+  }, [playerRef, playerMounted, setCurrentFrame, setPlaying]);
 
   const inputProps = useMemo(
     () => ({
