@@ -9,6 +9,12 @@ The key idea: the exact same Remotion composition powers the in-browser preview,
 the paused-frame filmstrip, **and** the final cloud render. What you see while
 editing is what you get on export — frame for frame.
 
+![rendrr catalog](docs/rendrr-catalog.jpg)
+
+> **Project status:** working technical prototype. The zero-configuration local
+> flow covers catalog, upload, editing, preview, and autosave. Cloud export
+> requires the AWS/Remotion configuration described below.
+
 ---
 
 ## What you can do
@@ -55,6 +61,18 @@ npm run build             # production build
 npm run typecheck         # tsc --noEmit
 npm run remotion:studio   # open the composition in Remotion Studio
 npm run remotion:deploy   # provision Lambda + site bundle (prints env vars)
+```
+
+### Verified
+
+The repository was freshly installed and production-built on **July 28, 2026**:
+
+```text
+npm ci
+npm run build
+✓ Compiled successfully
+✓ Type checks passed
+✓ 5 application routes generated
 ```
 
 ---
